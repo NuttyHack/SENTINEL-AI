@@ -10,6 +10,16 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: command-center
+    description: Global quality command center
+  - name: issues
+    description: Emerging quality issues
+  - name: vehicles
+    description: Vehicle risk intelligence
+  - name: investigations
+    description: Investigation workflow
+  - name: assistant
+    description: Explainable AI assistant
 paths:
   /healthz:
     get:
@@ -24,6 +34,170 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /dashboard:
+    get:
+      operationId: getDashboard
+      tags: [command-center]
+      summary: Get global quality command center summary
+      responses:
+        "200":
+          description: Dashboard summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dashboard"
+  /issues:
+    get:
+      operationId: listIssues
+      tags: [issues]
+      summary: List emerging quality issues
+      parameters:
+        - in: query
+          name: status
+          schema:
+            type: string
+          required: false
+        - in: query
+          name: severity
+          schema:
+            type: string
+          required: false
+      responses:
+        "200":
+          description: Issue list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/QualityIssue"
+  /issues/{id}:
+    get:
+      operationId: getIssue
+      tags: [issues]
+      summary: Get a quality issue investigation workspace
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Quality issue detail
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/IssueDetail"
+        "404":
+          description: Issue not found
+  /vehicles:
+    get:
+      operationId: listVehicles
+      tags: [vehicles]
+      summary: List vehicles with predictive risk
+      parameters:
+        - in: query
+          name: search
+          schema:
+            type: string
+          required: false
+      responses:
+        "200":
+          description: Vehicle list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Vehicle"
+  /vehicles/{id}:
+    get:
+      operationId: getVehicle
+      tags: [vehicles]
+      summary: Get a vehicle risk profile
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Vehicle risk profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VehicleDetail"
+        "404":
+          description: Vehicle not found
+  /investigations:
+    get:
+      operationId: listInvestigations
+      tags: [investigations]
+      summary: List active investigations
+      responses:
+        "200":
+          description: Investigation list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Investigation"
+    post:
+      operationId: createInvestigation
+      tags: [investigations]
+      summary: Create an investigation from an issue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/InvestigationInput"
+      responses:
+        "201":
+          description: Investigation created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Investigation"
+  /ai/investigate:
+    post:
+      operationId: askInvestigationAssistant
+      tags: [assistant]
+      summary: Ask the investigation assistant about an issue
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssistantQuestion"
+      responses:
+        "200":
+          description: Evidence-backed assistant response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssistantAnswer"
+  /reports:
+    post:
+      operationId: createReport
+      tags: [investigations]
+      summary: Generate an executive investigation report
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReportInput"
+      responses:
+        "201":
+          description: Report generated
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Report"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +207,211 @@ components:
           type: string
       required:
         - status
+    TrendPoint:
+      type: object
+      required: [label, value]
+      properties:
+        label: { type: string }
+        value: { type: number }
+    Dashboard:
+      type: object
+      required: [qualityHealth, activeIssues, criticalIssues, recallRisks, affectedVehicles, financialExposure, leadTimeDays, confidence, resolvedIssues, trend, modelRates, componentRates, regions, activity]
+      properties:
+        qualityHealth: { type: number }
+        activeIssues: { type: number }
+        criticalIssues: { type: number }
+        recallRisks: { type: number }
+        affectedVehicles: { type: number }
+        financialExposure: { type: number }
+        leadTimeDays: { type: number }
+        confidence: { type: number }
+        resolvedIssues: { type: number }
+        trend:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+        modelRates:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+        componentRates:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+        regions:
+          type: array
+          items: { $ref: "#/components/schemas/RegionRisk" }
+        activity:
+          type: array
+          items: { $ref: "#/components/schemas/Activity" }
+    RegionRisk:
+      type: object
+      required: [region, score, affected]
+      properties:
+        region: { type: string }
+        score: { type: number }
+        affected: { type: number }
+    Activity:
+      type: object
+      required: [id, title, detail, time, type]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        detail: { type: string }
+        time: { type: string }
+        type: { type: string }
+    QualityIssue:
+      type: object
+      required: [id, title, component, severity, status, riskScore, confidence, affectedVehicles, exposure, detectedDaysAgo, signal, owner]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        component: { type: string }
+        severity: { type: string }
+        status: { type: string }
+        riskScore: { type: number }
+        confidence: { type: number }
+        affectedVehicles: { type: number }
+        exposure: { type: number }
+        detectedDaysAgo: { type: number }
+        signal: { type: string }
+        owner: { type: string }
+    Hypothesis:
+      type: object
+      required: [id, title, probability, category, evidence]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        probability: { type: number }
+        category: { type: string }
+        evidence:
+          type: array
+          items: { type: string }
+    IssueDetail:
+      type: object
+      required: [issue, hypotheses, timeline, graph, impactedModels, impactedPlants, simulator]
+      properties:
+        issue: { $ref: "#/components/schemas/QualityIssue" }
+        hypotheses:
+          type: array
+          items: { $ref: "#/components/schemas/Hypothesis" }
+        timeline:
+          type: array
+          items: { $ref: "#/components/schemas/TimelineEvent" }
+        graph:
+          type: array
+          items: { $ref: "#/components/schemas/GraphNode" }
+        impactedModels:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+        impactedPlants:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+        simulator: { $ref: "#/components/schemas/Simulator" }
+    TimelineEvent:
+      type: object
+      required: [label, detail, date, kind]
+      properties:
+        label: { type: string }
+        detail: { type: string }
+        date: { type: string }
+        kind: { type: string }
+    GraphNode:
+      type: object
+      required: [id, label, value, kind]
+      properties:
+        id: { type: string }
+        label: { type: string }
+        value: { type: string }
+        kind: { type: string }
+    Simulator:
+      type: object
+      required: [affectedVehicles, failureProbability, repairCost, partsCost, laborCost, compensation, lateExposure, earlyExposure]
+      properties:
+        affectedVehicles: { type: number }
+        failureProbability: { type: number }
+        repairCost: { type: number }
+        partsCost: { type: number }
+        laborCost: { type: number }
+        compensation: { type: number }
+        lateExposure: { type: number }
+        earlyExposure: { type: number }
+    Vehicle:
+      type: object
+      required: [id, model, modelYear, plant, region, mileage, software, riskScore, riskLevel, failureProbability, primaryFactor]
+      properties:
+        id: { type: string }
+        model: { type: string }
+        modelYear: { type: number }
+        plant: { type: string }
+        region: { type: string }
+        mileage: { type: number }
+        software: { type: string }
+        riskScore: { type: number }
+        riskLevel: { type: string }
+        failureProbability: { type: number }
+        primaryFactor: { type: string }
+    VehicleDetail:
+      type: object
+      required: [vehicle, factors, events]
+      properties:
+        vehicle: { $ref: "#/components/schemas/Vehicle" }
+        factors:
+          type: array
+          items: { $ref: "#/components/schemas/Factor" }
+        events:
+          type: array
+          items: { $ref: "#/components/schemas/Activity" }
+    Factor:
+      type: object
+      required: [label, contribution, detail]
+      properties:
+        label: { type: string }
+        contribution: { type: number }
+        detail: { type: string }
+    Investigation:
+      type: object
+      required: [id, issueId, title, status, severity, investigator, updatedAt]
+      properties:
+        id: { type: string }
+        issueId: { type: string }
+        title: { type: string }
+        status: { type: string }
+        severity: { type: string }
+        investigator: { type: string }
+        updatedAt: { type: string }
+    InvestigationInput:
+      type: object
+      required: [issueId, investigator]
+      properties:
+        issueId: { type: string }
+        investigator: { type: string, minLength: 1 }
+    AssistantQuestion:
+      type: object
+      required: [issueId, question]
+      properties:
+        issueId: { type: string }
+        question: { type: string, minLength: 1 }
+    AssistantAnswer:
+      type: object
+      required: [answer, confidence, sources]
+      properties:
+        answer: { type: string }
+        confidence: { type: number }
+        sources:
+          type: array
+          items: { type: string }
+    ReportInput:
+      type: object
+      required: [issueId]
+      properties:
+        issueId: { type: string }
+    Report:
+      type: object
+      required: [id, issueId, title, generatedAt, sections]
+      properties:
+        id: { type: string }
+        issueId: { type: string }
+        title: { type: string }
+        generatedAt: { type: string }
+        sections:
+          type: array
+          items: { type: string }
 

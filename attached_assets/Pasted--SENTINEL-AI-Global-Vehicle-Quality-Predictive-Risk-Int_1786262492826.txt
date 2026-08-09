@@ -1,0 +1,788 @@
+# SENTINEL AI
+
+## Global Vehicle Quality & Predictive Risk Intelligence Platform
+
+### ROLE
+
+You are a senior staff-level software architect, AI engineer, product designer, data scientist, cybersecurity engineer, and enterprise SaaS developer.
+
+Build a production-quality MVP called **Sentinel AI**.
+
+Sentinel AI is an independent automotive technology concept designed to help vehicle manufacturers identify emerging quality, reliability, warranty, and potential recall risks before they become large-scale problems.
+
+The application must look and behave like a serious enterprise AI product that could eventually be demonstrated to a global automotive manufacturer.
+
+Do NOT build a simple dashboard.
+
+Build a complete, polished, technically credible platform with realistic synthetic automotive data, explainable AI, predictive analytics, an AI investigation assistant, risk scoring, and an executive-quality user interface.
+
+The system must clearly distinguish between:
+
+1. Real/public information
+2. Synthetic/demo data
+3. AI-generated hypotheses
+
+Never claim that synthetic data is actual manufacturer data.
+
+---
+
+# CORE PRODUCT VISION
+
+Sentinel AI continuously analyzes multiple automotive-quality signals and identifies weak signals that may indicate an emerging vehicle problem.
+
+The platform should answer:
+
+* What is going wrong?
+* Where is it happening?
+* Which vehicles are affected?
+* When did the signal begin?
+* Which component or software version may be responsible?
+* How confident is the system?
+* What evidence supports the conclusion?
+* What should engineers investigate?
+* What could happen if the issue is ignored?
+* How much potential exposure could exist?
+* How early did Sentinel detect the issue?
+
+The central product concept is:
+
+> DETECT → INVESTIGATE → EXPLAIN → PRIORITIZE → ACT
+
+---
+
+# MAIN APPLICATION
+
+Create a professional enterprise web application called:
+
+**SENTINEL AI**
+
+Subtitle:
+
+**Global Vehicle Quality Intelligence**
+
+Use a sophisticated automotive/technology visual identity.
+
+The interface should feel comparable in quality and usability to a modern enterprise platform used by engineering and executive teams.
+
+Do not use childish graphics, excessive gradients, generic AI imagery, or a template-looking dashboard.
+
+---
+
+# USER ROLES
+
+Implement role-based conceptual interfaces for:
+
+### Executive
+
+Focus:
+
+* global quality health
+* financial exposure
+* major emerging risks
+* potential recall risks
+* trends
+
+### Quality Engineer
+
+Focus:
+
+* anomalies
+* components
+* failure patterns
+* root-cause analysis
+* vehicle populations
+
+### Engineering Investigator
+
+Focus:
+
+* technical evidence
+* hypotheses
+* correlations
+* diagnostic signals
+* investigation workflow
+
+### Analyst
+
+Focus:
+
+* datasets
+* trends
+* reports
+* model performance
+
+Authentication can initially be simulated for the MVP.
+
+---
+
+# DASHBOARD
+
+Create a Global Quality Command Center.
+
+Display:
+
+* Global Quality Health Score
+* Active Emerging Issues
+* Critical Issues
+* Potential Recall Risks
+* Vehicles Potentially Affected
+* Estimated Financial Exposure
+* Average Detection Lead Time
+* AI Investigation Confidence
+* Issues Resolved
+
+Create interactive charts for:
+
+* emerging failures over time
+* warranty trends
+* failure rates by vehicle model
+* failure rates by component
+* geographic distribution
+* software-version correlations
+* manufacturing-batch correlations
+
+Include a global vehicle/plant map visualization if practical.
+
+---
+
+# SYNTHETIC DATA ENGINE
+
+Create a realistic synthetic automotive dataset.
+
+Generate at least:
+
+* 100,000 vehicles
+* 15–20 vehicle models
+* multiple model years
+* multiple manufacturing plants
+* thousands of component records
+* multiple suppliers
+* component batches
+* software/firmware versions
+* mileage
+* vehicle age
+* geographic region
+* environmental conditions
+* diagnostic events
+* warranty claims
+* dealer repairs
+* component replacements
+* failure events
+
+Each vehicle should have a unique identifier.
+
+Create relational connections between:
+
+vehicles
+→ components
+→ suppliers
+→ manufacturing batches
+→ software versions
+→ diagnostic events
+→ warranty claims
+→ repairs
+→ failures
+
+The data should contain realistic correlations.
+
+---
+
+# HIDDEN FAILURE SCENARIOS
+
+Create several deliberately embedded problems in the synthetic dataset.
+
+Examples:
+
+### Scenario A
+
+A component batch has an unusually high failure rate after approximately 30,000 km.
+
+### Scenario B
+
+A software version correlates with increased failures of another subsystem.
+
+### Scenario C
+
+A failure occurs disproportionately in high-temperature environments.
+
+### Scenario D
+
+A particular supplier batch creates a statistically significant anomaly.
+
+### Scenario E
+
+A combination of vehicle age + mileage + software version predicts increased failure probability.
+
+The system must NOT be explicitly told the answers.
+
+The AI/analytics layer should discover these patterns.
+
+---
+
+# AI ANOMALY DETECTION
+
+Implement real anomaly detection rather than random generated results.
+
+Use appropriate statistical or machine-learning techniques such as:
+
+* isolation forests
+* clustering
+* statistical anomaly detection
+* time-series analysis
+* change-point detection
+* correlation analysis
+
+The system should calculate an anomaly score.
+
+Example:
+
+Risk Score: 91/100
+
+Severity:
+CRITICAL
+
+Confidence:
+92%
+
+Detection:
+47 days earlier than baseline threshold
+
+---
+
+# VEHICLE RISK MODEL
+
+Create a predictive risk score for individual vehicles.
+
+Example:
+
+Vehicle:
+SNT-00018472
+
+Risk:
+HIGH
+
+Probability of relevant failure:
+78%
+
+Primary risk factors:
+
+* component age
+* mileage
+* software version
+* environmental exposure
+* historical failure pattern
+
+Show an explanation rather than only producing a number.
+
+---
+
+# ISSUE INVESTIGATION PAGE
+
+This is the most important feature.
+
+When a user selects an emerging issue, create an investigation workspace.
+
+Example:
+
+ISSUE:
+Cooling System Anomaly
+
+Show:
+
+First Detected:
+47 days ago
+
+Affected Population:
+184,000 vehicles
+
+Current Risk:
+HIGH
+
+Confidence:
+91%
+
+Potential Exposure:
+$XXM
+
+Then display:
+
+## AI Investigation
+
+Generate several possible hypotheses.
+
+Example:
+
+Hypothesis 1:
+Component degradation
+
+Probability:
+67%
+
+Hypothesis 2:
+Software interaction
+
+Probability:
+21%
+
+Hypothesis 3:
+Environmental factor
+
+Probability:
+12%
+
+For each hypothesis, show evidence.
+
+The AI must explain its reasoning using available dataset evidence.
+
+---
+
+# AI ENGINEERING ASSISTANT
+
+Create an AI chat interface inside the investigation page.
+
+Users can ask:
+
+"Why is this issue considered high risk?"
+
+"Which vehicle models are most affected?"
+
+"When did the anomaly first appear?"
+
+"Which component has the strongest correlation?"
+
+"Could software version 4.8 be involved?"
+
+"Which manufacturing plant has the highest incidence?"
+
+"What evidence supports the leading hypothesis?"
+
+"What additional data would help confirm the root cause?"
+
+The assistant should answer using application data.
+
+Do not hallucinate unavailable facts.
+
+If information is unavailable, explicitly state:
+
+"Insufficient evidence in the current dataset."
+
+---
+
+# ROOT-CAUSE GRAPH
+
+Create a visual relationship graph.
+
+Example:
+
+Supplier
+↓
+Component Batch
+↓
+Vehicle Component
+↓
+Software Version
+↓
+Diagnostic Signal
+↓
+Warranty Claim
+↓
+Failure
+
+Allow users to explore relationships.
+
+---
+
+# RECALL RISK SIMULATOR
+
+Create a business-impact simulator.
+
+Inputs:
+
+Affected vehicles
+Failure probability
+Repair cost
+Parts cost
+Labor cost
+Potential customer compensation
+Detection date
+Intervention date
+
+Calculate estimated exposure.
+
+Allow the user to compare:
+
+Scenario A:
+Issue detected late
+
+Scenario B:
+Issue detected early
+
+Display estimated difference.
+
+Clearly label all figures as simulated estimates.
+
+---
+
+# EARLY WARNING TIMELINE
+
+Create a timeline showing:
+
+First weak signal
+↓
+Anomaly detected
+↓
+Risk increased
+↓
+Investigation triggered
+↓
+Potential intervention point
+↓
+Potential failure threshold
+
+This should visually communicate the value of early detection.
+
+---
+
+# QUALITY INCIDENT MANAGEMENT
+
+Allow users to:
+
+* create investigations
+* assign severity
+* assign investigators
+* add notes
+* change status
+* attach evidence
+* create recommendations
+* mark issues resolved
+
+Statuses:
+
+NEW
+INVESTIGATING
+HIGH PRIORITY
+ENGINEERING REVIEW
+ACTION REQUIRED
+RESOLVED
+
+---
+
+# AI-GENERATED REPORTS
+
+Allow users to generate an executive investigation report.
+
+Report sections:
+
+1. Executive Summary
+2. Issue Description
+3. Detection Timeline
+4. Affected Population
+5. Statistical Evidence
+6. AI Hypotheses
+7. Root-Cause Candidates
+8. Risk Assessment
+9. Potential Business Exposure
+10. Recommended Next Steps
+11. Data Limitations
+12. Confidence Level
+
+Include export functionality if practical.
+
+---
+
+# DATA TRANSPARENCY
+
+Create a dedicated "Data & Model Transparency" section.
+
+Clearly explain:
+
+* dataset source
+* whether data is synthetic
+* model methodology
+* confidence
+* limitations
+* false-positive considerations
+* false-negative considerations
+
+Never present simulated results as real manufacturer results.
+
+---
+
+# PUBLIC DATA INTEGRATION
+
+Architect the application so that future public datasets can be imported.
+
+Create an ingestion layer capable of accepting:
+
+CSV
+JSON
+API data
+
+Normalize incoming data into the internal schema.
+
+Create a data-source registry.
+
+---
+
+# API
+
+Create a clean FastAPI backend.
+
+Include endpoints conceptually similar to:
+
+GET /vehicles
+GET /vehicles/{id}
+GET /issues
+GET /issues/{id}
+GET /components
+GET /suppliers
+GET /warranty
+GET /diagnostics
+GET /analytics/risk
+GET /analytics/anomalies
+GET /investigations
+POST /investigations
+POST /ai/investigate
+POST /reports
+
+Use proper validation and error handling.
+
+---
+
+# DATABASE
+
+Use PostgreSQL.
+
+Create a clean relational schema.
+
+Important tables should include:
+
+vehicles
+vehicle_models
+components
+component_batches
+suppliers
+manufacturing_plants
+software_versions
+diagnostic_events
+warranty_claims
+repair_events
+failure_events
+quality_issues
+investigations
+risk_scores
+ai_hypotheses
+recommendations
+users
+audit_logs
+
+Create indexes for frequently queried fields.
+
+---
+
+# FRONTEND
+
+Use:
+
+Next.js
+TypeScript
+Tailwind CSS
+modern component architecture
+responsive design
+
+Build:
+
+Sidebar navigation
+Top navigation
+Dashboard
+Issues
+Vehicles
+Components
+Investigations
+AI Assistant
+Analytics
+Reports
+Data Sources
+Model Transparency
+Settings
+
+Use excellent loading states, empty states, error states, tooltips, filters, search, pagination, and responsive behavior.
+
+---
+
+# DESIGN PRINCIPLES
+
+The interface must communicate:
+
+Precision
+Trust
+Engineering
+Safety
+Intelligence
+Scale
+
+Avoid:
+
+generic SaaS templates
+overly bright colors
+unnecessary animations
+fake 3D car graphics
+stock photos
+fake statistics
+unexplained AI predictions
+
+Prioritize information density and clarity.
+
+---
+
+# SECURITY
+
+Implement basic enterprise security architecture.
+
+Include:
+
+* environment variables
+* secure API configuration
+* authentication architecture
+* authorization architecture
+* input validation
+* rate limiting where appropriate
+* audit logging
+* no hard-coded secrets
+
+Do not store API keys in source code.
+
+---
+
+# AI SAFETY AND RELIABILITY
+
+The system must distinguish:
+
+FACT
+STATISTICAL OBSERVATION
+MODEL PREDICTION
+AI HYPOTHESIS
+RECOMMENDATION
+
+Every AI investigation should display confidence.
+
+Never claim that an issue is definitely a safety defect unless the evidence actually supports that conclusion.
+
+Use language such as:
+
+"Potential emerging issue"
+"Requires engineering validation"
+"Model indicates elevated risk"
+
+---
+
+# DEMONSTRATION MODE
+
+Create a "Demo Investigation" that allows a visitor to experience the complete workflow.
+
+The demo should begin with:
+
+"Sentinel AI has detected an emerging quality signal."
+
+Then guide the user through:
+
+1. Detection
+2. Risk assessment
+3. Affected vehicles
+4. Root-cause investigation
+5. Evidence
+6. AI questioning
+7. Business exposure
+8. Recommended action
+
+This should be the strongest demonstration of the platform.
+
+---
+
+# LANDING PAGE
+
+Create a public landing page.
+
+Headline:
+
+"Detect Vehicle Quality Risks Before They Become Recalls."
+
+Subheadline:
+
+"Sentinel AI combines predictive analytics, anomaly detection, and explainable artificial intelligence to identify emerging vehicle-quality signals earlier."
+
+Sections:
+
+Problem
+Solution
+How It Works
+AI Investigation
+Predictive Risk
+Business Impact
+Technology
+Data Transparency
+Demo
+Contact
+
+Do not claim Ford is a customer or partner.
+
+State clearly:
+
+"Independent technology prototype."
+
+---
+
+# DEVELOPMENT QUALITY
+
+Write clean, maintainable code.
+
+Use reusable components.
+
+Separate frontend, backend, AI, database, and data-generation logic.
+
+Create documentation.
+
+Create a README containing:
+
+* product overview
+* architecture
+* setup
+* environment variables
+* database setup
+* data generation
+* AI methodology
+* API documentation
+* limitations
+* demo instructions
+
+Include automated tests for critical backend functions.
+
+---
+
+# MOST IMPORTANT REQUIREMENT
+
+Do not optimize for simply making the application look impressive.
+
+Optimize for demonstrating a real technological thesis:
+
+> Can AI detect weak vehicle-quality signals early, explain why they matter, identify the most likely contributing factors, and estimate the potential impact?
+
+The final application should feel like a serious early-stage automotive AI company rather than a coding exercise.
+
+Build the MVP incrementally.
+
+First ensure the database and synthetic data engine work.
+
+Then implement analytics.
+
+Then AI investigation.
+
+Then backend APIs.
+
+Then frontend.
+
+Then polish the enterprise experience.
+
+If a feature cannot be implemented reliably, create a clearly labeled MVP implementation rather than faking functionality.
+
+At every stage, preserve technical credibility.

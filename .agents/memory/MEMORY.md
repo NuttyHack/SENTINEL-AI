@@ -1,0 +1,1 @@
+- [OpenAPI numeric compatibility](openapi-zod-compatibility.md) — this workspace's generated Zod layer supports numeric fields more reliably than OpenAPI integer fields.

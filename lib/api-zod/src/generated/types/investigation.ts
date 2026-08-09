@@ -6,6 +6,12 @@
  * OpenAPI spec version: 0.1.0
  */
 
-export interface HealthStatus {
+export interface Investigation {
+  id: string;
+  issueId: string;
+  title: string;
   status: string;
+  severity: string;
+  investigator: string;
+  updatedAt: string;
 }
