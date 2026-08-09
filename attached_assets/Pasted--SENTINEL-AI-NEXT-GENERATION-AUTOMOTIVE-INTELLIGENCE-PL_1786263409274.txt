@@ -1,0 +1,898 @@
+# SENTINEL AI — NEXT-GENERATION AUTOMOTIVE INTELLIGENCE PLATFORM
+
+## Premium UX + Advanced Automotive Intelligence Expansion
+
+Upgrade the existing Sentinel AI application into a premium, global, enterprise-grade automotive AI platform.
+
+The goal is NOT to create a generic SaaS dashboard.
+
+The goal is to create an ambitious prototype demonstrating what a next-generation automotive intelligence platform could look like.
+
+The product must feel:
+
+* premium
+* futuristic
+* automotive
+* intelligent
+* trustworthy
+* technically sophisticated
+* cinematic
+* enterprise-grade
+
+It must never falsely claim to be owned, endorsed, partnered with, or deployed by Ford or any other manufacturer.
+
+Use synthetic/demo data where real manufacturer data is unavailable.
+
+---
+
+# DESIGN DIRECTION
+
+Create a visual language inspired by:
+
+* premium automotive interfaces
+* advanced AI products
+* aerospace mission-control interfaces
+* modern enterprise technology
+* cinematic automotive photography
+
+Use:
+
+* dark interfaces
+* sophisticated glassmorphism
+* large typography
+* high-quality automotive hero imagery
+* subtle gradients
+* animated data visualizations
+* smooth page transitions
+* parallax effects
+* interactive cards
+* depth
+* soft shadows
+* restrained glow effects
+* cinematic section transitions
+
+Do NOT overuse animations.
+
+Animations must communicate:
+
+data movement
+system intelligence
+vehicle status
+relationships
+discovery
+
+Avoid:
+
+* childish UI
+* excessive neon
+* generic dashboard templates
+* random animations
+* fake 3D effects
+* unnecessary gradients
+* stock-looking AI illustrations
+
+---
+
+# HERO EXPERIENCE
+
+Build a cinematic landing page.
+
+Hero headline:
+
+"INTELLIGENCE BEFORE FAILURE."
+
+Supporting text:
+
+"An AI-powered vehicle intelligence platform designed to identify emerging quality, reliability, and software risks before they become expensive failures."
+
+Primary CTA:
+
+"EXPLORE SENTINEL"
+
+Secondary CTA:
+
+"VIEW LIVE DEMO"
+
+Use a premium automotive hero image.
+
+The hero should contain subtle animated telemetry/data overlays.
+
+As the user scrolls, transition from the vehicle visual into the Sentinel intelligence network.
+
+---
+
+# HERO FEATURE CARDS
+
+Create large interactive cards.
+
+Cards:
+
+1. RECALL RADAR
+2. AI INVESTIGATOR
+3. DIGITAL TWIN
+4. GLOBAL FLEET
+5. FACTORY INTELLIGENCE
+6. SOFTWARE WATCH
+
+Each card must be interactive and lead to a functional application page.
+
+Cards should have:
+
+* cinematic background imagery where appropriate
+* hover movement
+* subtle depth
+* animated statistics
+* expandable content
+* smooth transitions
+
+---
+
+# AUTHENTICATION
+
+Create premium authentication pages.
+
+Routes:
+
+/login
+/signup
+/forgot-password
+/verify
+/onboarding
+
+Login page:
+
+Split-screen layout.
+
+Left:
+cinematic automotive image with animated telemetry.
+
+Right:
+authentication form.
+
+Include:
+
+Email
+Password
+Remember me
+Forgot password
+Sign in
+Continue with Google
+
+Signup:
+
+Full Name
+Email
+Company
+Role
+Password
+Confirm Password
+
+Add terms acceptance.
+
+Create polished validation and loading states.
+
+---
+
+# ONBOARDING
+
+After signup, create a guided onboarding experience.
+
+Step 1:
+Organization
+
+Step 2:
+Role
+
+Step 3:
+Primary objective
+
+Options:
+
+Quality
+Engineering
+Manufacturing
+Warranty
+Fleet
+Software
+Analytics
+
+Step 4:
+Choose dashboard
+
+Step 5:
+Complete
+
+Then open the Sentinel command center.
+
+---
+
+# DIGITAL TWIN
+
+Create a major new feature.
+
+Every simulated vehicle receives a Digital Twin.
+
+Display:
+
+Vehicle identity
+Model
+Year
+Mileage
+Software version
+Health score
+Component health
+Predicted risks
+Recent events
+
+Create a sophisticated vehicle visualization.
+
+Allow the user to select:
+
+Engine
+Transmission
+Cooling
+Brakes
+Battery
+Electrical
+Suspension
+Sensors
+Infotainment
+
+Each subsystem displays:
+
+Health
+Risk
+Trend
+Evidence
+
+Never present predictions as guaranteed mechanical diagnoses.
+
+---
+
+# PREDICTIVE COMPONENT HEALTH
+
+Create component-level prediction.
+
+Calculate simulated:
+
+Health score
+Risk score
+Estimated degradation
+Failure probability
+Confidence
+
+Use language:
+
+"Model-estimated risk"
+
+rather than claiming certainty.
+
+---
+
+# AI RECALL RADAR
+
+Create a dedicated page.
+
+Display:
+
+Emerging signals
+Risk level
+Affected population
+Detection date
+Confidence
+Potential exposure
+
+Create an investigation button.
+
+When clicked:
+
+OPEN INVESTIGATION
+
+---
+
+# AI ROOT-CAUSE INVESTIGATOR
+
+Create an advanced investigation workspace.
+
+Show:
+
+Issue
+Severity
+Confidence
+Affected vehicles
+First detection
+Evidence
+Hypotheses
+Correlations
+Timeline
+
+Create a dynamic root-cause graph.
+
+Relationships:
+
+Supplier
+→ Component
+→ Batch
+→ Plant
+→ Vehicle
+→ Software
+→ Diagnostic Event
+→ Warranty Event
+→ Failure
+
+Allow graph nodes to be selected.
+
+---
+
+# AI ENGINEERING COPILOT
+
+Create an embedded AI assistant.
+
+Example questions:
+
+"Why was this issue flagged?"
+
+"Which vehicles are most affected?"
+
+"What evidence supports this hypothesis?"
+
+"Which component has the strongest correlation?"
+
+"Compare affected and unaffected vehicles."
+
+"What additional data should we collect?"
+
+"Generate an engineering investigation plan."
+
+The AI must only use available application data.
+
+When evidence is insufficient, say:
+
+"Insufficient evidence in the current dataset."
+
+---
+
+# SOFTWARE INTELLIGENCE
+
+Create:
+
+/software-intelligence
+
+Analyze software versions.
+
+Compare:
+
+Version A
+Version B
+
+Show simulated changes in:
+
+diagnostic events
+failure patterns
+component behavior
+warranty claims
+
+Create:
+
+SOFTWARE REGRESSION ALERT
+
+Example:
+
+"Model-estimated increase in diagnostic events following software version change."
+
+Always label simulated data.
+
+---
+
+# OTA UPDATE SIMULATOR
+
+Create:
+
+/ota-simulator
+
+Allow users to simulate a software update.
+
+Inputs:
+
+vehicle population
+software version
+affected subsystem
+deployment percentage
+
+Output:
+
+estimated impact
+potential anomalies
+affected models
+risk level
+
+Clearly label the results as simulation.
+
+---
+
+# GLOBAL FLEET MAP
+
+Create:
+
+/global-map
+
+Interactive world map.
+
+Display simulated:
+
+vehicle population
+quality signals
+failure clusters
+warranty anomalies
+software anomalies
+manufacturing issues
+
+Clicking a region opens regional intelligence.
+
+---
+
+# FACTORY INTELLIGENCE
+
+Create:
+
+/factory-intelligence
+
+Show simulated manufacturing plants.
+
+For each plant:
+
+Quality score
+Production anomalies
+Component issues
+Defect trend
+AI alerts
+
+Drill down:
+
+Plant
+→ Production line
+→ Batch
+→ Component
+→ Vehicle
+
+---
+
+# SUPPLIER INTELLIGENCE
+
+Create:
+
+/supplier-intelligence
+
+Show supplier risk.
+
+Metrics:
+
+Quality score
+Batch anomalies
+Failure correlation
+Warranty impact
+Trend
+
+Create supplier comparison tools.
+
+All data is simulated unless explicitly sourced from public data.
+
+---
+
+# WARRANTY INTELLIGENCE
+
+Create:
+
+/warranty-intelligence
+
+Analyze warranty claims.
+
+Show:
+
+claims over time
+claim clusters
+component trends
+model trends
+regional trends
+
+Use NLP-style grouping for claim descriptions.
+
+---
+
+# CUSTOMER VOICE INTELLIGENCE
+
+Create:
+
+/customer-voice
+
+Generate simulated customer complaint records.
+
+Use NLP to cluster similar descriptions.
+
+Example cluster:
+
+"Vehicle loses power during acceleration"
+
+Then show:
+
+Complaint count
+Affected models
+Timeline
+Geographic distribution
+Related diagnostic signals
+
+Create:
+
+"Correlate with Engineering Data"
+
+button.
+
+This should connect customer complaints to diagnostic and warranty signals.
+
+---
+
+# RECALL SIMULATOR
+
+Create:
+
+/simulator
+
+Allow users to model:
+
+affected vehicles
+failure rate
+repair cost
+parts cost
+labor
+detection date
+intervention date
+
+Compare:
+
+LATE DETECTION
+
+vs.
+
+EARLY DETECTION
+
+Show modeled difference.
+
+Every financial number must be labeled:
+
+"Simulated estimate"
+
+---
+
+# VEHICLE HEALTH PASSPORT
+
+Every vehicle receives a premium profile.
+
+Display:
+
+Vehicle Health
+System Health
+Risk
+Maintenance events
+Diagnostic history
+Warranty history
+Software history
+AI predictions
+
+Add a visual timeline.
+
+---
+
+# INVESTIGATION TIMELINE
+
+Create a forensic timeline.
+
+Example:
+
+FIRST SIGNAL
+↓
+ANOMALY
+↓
+WARRANTY SPIKE
+↓
+CORRELATION
+↓
+AI INVESTIGATION
+↓
+HIGH-RISK SIGNAL
+
+Animate the timeline subtly when opened.
+
+---
+
+# REPORT CENTER
+
+Create:
+
+/reports
+
+Users can generate:
+
+Executive Report
+Engineering Report
+Quality Report
+Investigation Report
+
+Include:
+
+summary
+evidence
+risk
+hypotheses
+timeline
+recommendations
+limitations
+
+---
+
+# SENTINEL LABS
+
+Create:
+
+/labs
+
+Present experimental technology.
+
+Cards:
+
+Failure Prediction
+Digital Twin
+Recall Radar
+Root Cause AI
+Software Regression
+Fleet Intelligence
+
+Each lab has:
+
+concept
+status
+demo
+technology
+limitations
+
+Make this section feel like an advanced automotive research division.
+
+---
+
+# DATA TRANSPARENCY
+
+Create:
+
+/data
+
+Show:
+
+data sources
+synthetic datasets
+schema
+records
+data quality
+model inputs
+
+Clearly identify:
+
+PUBLIC DATA
+SYNTHETIC DATA
+MODEL OUTPUT
+AI HYPOTHESIS
+
+---
+
+# MODEL INTELLIGENCE
+
+Create:
+
+/model-intelligence
+
+Show model information.
+
+Metrics:
+
+precision
+recall
+false-positive rate
+false-negative rate
+confidence
+data coverage
+
+Do not fabricate real-world validation.
+
+Use simulated benchmark results only if clearly labeled.
+
+---
+
+# ENTERPRISE AUDIT LOG
+
+Create:
+
+/audit-log
+
+Track:
+
+login
+investigation creation
+report generation
+data import
+configuration changes
+AI investigations
+
+---
+
+# SETTINGS
+
+Create:
+
+/settings
+
+Sections:
+
+Profile
+Organization
+Notifications
+Security
+API
+Data
+AI preferences
+
+---
+
+# NAVIGATION
+
+Create a polished sidebar:
+
+COMMAND CENTER
+GLOBAL FLEET
+VEHICLES
+DIGITAL TWINS
+
+QUALITY
+RECALL RADAR
+ISSUES
+INVESTIGATIONS
+WARRANTY INTELLIGENCE
+
+ENGINEERING
+AI COPILOT
+SOFTWARE INTELLIGENCE
+OTA SIMULATOR
+
+OPERATIONS
+FACTORY INTELLIGENCE
+SUPPLIER INTELLIGENCE
+
+INTELLIGENCE
+GLOBAL MAP
+ANALYTICS
+SIMULATOR
+REPORTS
+
+LABS
+SENTINEL LABS
+
+SYSTEM
+DATA
+MODEL INTELLIGENCE
+AUDIT LOG
+SETTINGS
+
+---
+
+# MOTION DESIGN
+
+Use subtle modern motion.
+
+Examples:
+
+Cards gently lift on hover.
+
+Charts animate into view.
+
+Risk indicators transition smoothly.
+
+Map points pulse subtly.
+
+Investigation graphs animate relationships.
+
+Page transitions are smooth.
+
+Hero imagery moves slightly with scrolling.
+
+Do NOT animate everything.
+
+Motion must reinforce meaning.
+
+---
+
+# RESPONSIVENESS
+
+Fully responsive:
+
+desktop
+tablet
+mobile
+
+Desktop should feel like an enterprise command center.
+
+Mobile should remain functional and premium.
+
+---
+
+# PERFORMANCE
+
+Optimize:
+
+image loading
+lazy loading
+code splitting
+chart rendering
+database queries
+
+Do not allow visual effects to destroy performance.
+
+---
+
+# PRODUCT CREDIBILITY
+
+The most important rule:
+
+Never fake partnerships.
+
+Never display:
+
+"Powered by Ford"
+
+"Ford customer"
+
+"Ford approved"
+
+unless explicitly authorized.
+
+Instead use:
+
+"Independent Automotive AI Prototype"
+
+and:
+
+"Demonstration environment using synthetic data."
+
+---
+
+# FINAL EXPERIENCE
+
+The completed platform should make a technical visitor think:
+
+"This is not just a website."
+
+"It is a concept for an automotive intelligence company."
+
+The application must demonstrate:
+
+AI
+data science
+predictive analytics
+automotive engineering
+software intelligence
+quality intelligence
+enterprise UX
+explainability
+business modeling
+
+Build functionality before decoration.
+
+Do not create fake buttons.
+
+Every major navigation item should lead to a functioning page or clearly labeled MVP feature.
+
+Prioritize technical credibility, visual quality, and the ability to demonstrate a complete investigation from:
+
+DATA
+→ DETECTION
+→ AI ANALYSIS
+→ ROOT CAUSE
+→ RISK
+→ BUSINESS IMPACT
+→ RECOMMENDED ACTION
