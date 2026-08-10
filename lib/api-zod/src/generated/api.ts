@@ -274,3 +274,101 @@ export const CreateReportResponse = zod.object({
 })
 
 
+/**
+ * @summary Get ranked emerging recall risk signals
+ */
+export const GetRecallRadarResponse = zod.object({
+  "signals": zod.array(zod.object({
+  "id": zod.string(),
+  "title": zod.string(),
+  "component": zod.string(),
+  "severity": zod.string(),
+  "status": zod.string(),
+  "affectedVehicles": zod.number(),
+  "detectedDaysAgo": zod.number(),
+  "confidence": zod.number(),
+  "exposure": zod.number(),
+  "signal": zod.string(),
+  "leadingHypothesis": zod.string(),
+  "whyFlagged": zod.array(zod.string()),
+  "riskScore": zod.number()
+})),
+  "totalAtRisk": zod.number(),
+  "criticalSignals": zod.number(),
+  "averageLeadTime": zod.number(),
+  "syntheticLabel": zod.string(),
+  "detectionTrend": zod.array(zod.object({
+  "label": zod.string(),
+  "value": zod.number()
+}))
+})
+
+
+/**
+ * @summary Compare software versions for model-estimated regressions
+ */
+export const GetSoftwareIntelligenceQueryParams = zod.object({
+  "baseline": zod.coerce.string().optional(),
+  "comparison": zod.coerce.string().optional()
+})
+
+export const GetSoftwareIntelligenceResponse = zod.object({
+  "baselineVersion": zod.string(),
+  "comparisonVersion": zod.string(),
+  "subsystem": zod.string(),
+  "regressionAlert": zod.string(),
+  "changeInDiagnostics": zod.number(),
+  "changeInFailures": zod.number(),
+  "changeInWarranty": zod.number(),
+  "confidence": zod.number(),
+  "affectedModels": zod.array(zod.object({
+  "label": zod.string(),
+  "value": zod.number()
+})),
+  "versions": zod.array(zod.object({
+  "version": zod.string(),
+  "fleetShare": zod.number(),
+  "diagnosticRate": zod.number(),
+  "failureRate": zod.number(),
+  "warrantyRate": zod.number()
+})),
+  "evidence": zod.array(zod.string()),
+  "recommendation": zod.string()
+})
+
+
+/**
+ * @summary Simulate the modeled impact of an OTA update
+ */
+
+
+
+
+export const simulateOtaUpdateBodyDeploymentPercentageMax = 100;
+
+
+
+export const SimulateOtaUpdateBody = zod.object({
+  "population": zod.number().min(1),
+  "fromVersion": zod.string().min(1),
+  "toVersion": zod.string().min(1),
+  "subsystem": zod.string().min(1),
+  "deploymentPercentage": zod.number().min(1).max(simulateOtaUpdateBodyDeploymentPercentageMax)
+})
+
+export const SimulateOtaUpdateResponse = zod.object({
+  "population": zod.number(),
+  "deploymentPercentage": zod.number(),
+  "estimatedImpact": zod.string(),
+  "potentialAnomalies": zod.array(zod.string()),
+  "affectedModels": zod.array(zod.object({
+  "label": zod.string(),
+  "value": zod.number()
+})),
+  "riskLevel": zod.string(),
+  "rollbackRecommendation": zod.string(),
+  "modelConfidence": zod.number(),
+  "simulatedEstimate": zod.boolean()
+})
+
+

@@ -23,15 +23,20 @@ import type {
   AssistantAnswer,
   AssistantQuestion,
   Dashboard,
+  GetSoftwareIntelligenceParams,
   HealthStatus,
   Investigation,
   InvestigationInput,
   IssueDetail,
   ListIssuesParams,
   ListVehiclesParams,
+  OtaSimulation,
+  OtaSimulationInput,
   QualityIssue,
+  RecallRadar,
   Report,
   ReportInput,
+  SoftwareIntelligence,
   Vehicle,
   VehicleDetail
 } from './api.schemas';
@@ -828,5 +833,237 @@ export const useCreateReport = <TError = ErrorType<unknown>,
         TContext
       > => {
       return useMutation(getCreateReportMutationOptions(options));
+    }
+
+export const getGetRecallRadarUrl = () => {
+
+
+
+
+  return `/api/recall-radar`
+}
+
+/**
+ * @summary Get ranked emerging recall risk signals
+ */
+export const getRecallRadar = async ( options?: Parameters<typeof customFetch>[1]): Promise<RecallRadar> => {
+
+  return customFetch<RecallRadar>(getGetRecallRadarUrl(),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetRecallRadarQueryKey = () => {
+    return [
+    `/api/recall-radar`
+    ] as const;
+    }
+
+
+export const getGetRecallRadarQueryOptions = <TData = Awaited<ReturnType<typeof getRecallRadar>>, TError = ErrorType<unknown>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getRecallRadar>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetRecallRadarQueryKey();
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getRecallRadar>>> = ({ signal }) => getRecallRadar({ signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getRecallRadar>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetRecallRadarQueryResult = NonNullable<Awaited<ReturnType<typeof getRecallRadar>>>
+export type GetRecallRadarQueryError = ErrorType<unknown>
+
+
+/**
+ * @summary Get ranked emerging recall risk signals
+ */
+
+export function useGetRecallRadar<TData = Awaited<ReturnType<typeof getRecallRadar>>, TError = ErrorType<unknown>>(
+  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getRecallRadar>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetRecallRadarQueryOptions(options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
+export const getGetSoftwareIntelligenceUrl = (params?: GetSoftwareIntelligenceParams,) => {
+  const normalizedParams = new URLSearchParams();
+
+  Object.entries(params || {}).forEach(([key, value]) => {
+
+    if (value !== undefined) {
+      normalizedParams.append(key, value === null ? 'null' : String(value))
+    }
+  });
+
+  const stringifiedParams = normalizedParams.toString();
+
+  return stringifiedParams.length > 0 ? `/api/software-intelligence?${stringifiedParams}` : `/api/software-intelligence`
+}
+
+/**
+ * @summary Compare software versions for model-estimated regressions
+ */
+export const getSoftwareIntelligence = async (params?: GetSoftwareIntelligenceParams, options?: Parameters<typeof customFetch>[1]): Promise<SoftwareIntelligence> => {
+
+  return customFetch<SoftwareIntelligence>(getGetSoftwareIntelligenceUrl(params),
+  {
+    ...options,
+    method: 'GET'
+
+
+  }
+);}
+
+
+
+
+
+export const getGetSoftwareIntelligenceQueryKey = (params?: GetSoftwareIntelligenceParams,) => {
+    return [
+    `/api/software-intelligence`, ...(params ? [params] : [])
+    ] as const;
+    }
+
+
+export const getGetSoftwareIntelligenceQueryOptions = <TData = Awaited<ReturnType<typeof getSoftwareIntelligence>>, TError = ErrorType<unknown>>(params?: GetSoftwareIntelligenceParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getSoftwareIntelligence>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+) => {
+
+const {query: queryOptions, request: requestOptions} = options ?? {};
+
+  const queryKey =  queryOptions?.queryKey ?? getGetSoftwareIntelligenceQueryKey(params);
+
+
+
+    const queryFn: QueryFunction<Awaited<ReturnType<typeof getSoftwareIntelligence>>> = ({ signal }) => getSoftwareIntelligence(params, { signal, ...requestOptions });
+
+
+
+
+
+   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getSoftwareIntelligence>>, TError, TData> & { queryKey: QueryKey }
+}
+
+export type GetSoftwareIntelligenceQueryResult = NonNullable<Awaited<ReturnType<typeof getSoftwareIntelligence>>>
+export type GetSoftwareIntelligenceQueryError = ErrorType<unknown>
+
+
+/**
+ * @summary Compare software versions for model-estimated regressions
+ */
+
+export function useGetSoftwareIntelligence<TData = Awaited<ReturnType<typeof getSoftwareIntelligence>>, TError = ErrorType<unknown>>(
+ params?: GetSoftwareIntelligenceParams, options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getSoftwareIntelligence>>, TError, TData>, request?: SecondParameter<typeof customFetch>}
+
+ ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+
+  const queryOptions = getGetSoftwareIntelligenceQueryOptions(params,options)
+
+  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
+
+  return withQueryKey(query, queryOptions.queryKey);
+}
+
+
+
+
+
+
+
+export const getSimulateOtaUpdateUrl = () => {
+
+
+
+
+  return `/api/ota-simulator`
+}
+
+/**
+ * @summary Simulate the modeled impact of an OTA update
+ */
+export const simulateOtaUpdate = async (otaSimulationInput: OtaSimulationInput, options?: Parameters<typeof customFetch>[1]): Promise<OtaSimulation> => {
+
+  return customFetch<OtaSimulation>(getSimulateOtaUpdateUrl(),
+  {
+    ...options,
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', ...options?.headers },
+    body: JSON.stringify(otaSimulationInput)
+  }
+);}
+
+
+
+
+
+export const getSimulateOtaUpdateMutationOptions = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof simulateOtaUpdate>>, TError,{data: BodyType<OtaSimulationInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+): UseMutationOptions<Awaited<ReturnType<typeof simulateOtaUpdate>>, TError,{data: BodyType<OtaSimulationInput>}, TContext> => {
+
+const mutationKey = ['simulateOtaUpdate'];
+const {mutation: mutationOptions, request: requestOptions} = options ?
+      options.mutation && 'mutationKey' in options.mutation && options.mutation.mutationKey ?
+      options
+      : {...options, mutation: {...options.mutation, mutationKey}}
+      : {mutation: { mutationKey, }, request: undefined};
+
+
+
+
+      const mutationFn: MutationFunction<Awaited<ReturnType<typeof simulateOtaUpdate>>, {data: BodyType<OtaSimulationInput>}> = (props) => {
+          const {data} = props ?? {};
+
+          return  simulateOtaUpdate(data,requestOptions)
+        }
+
+
+
+
+
+
+  return  { mutationFn, ...mutationOptions }}
+
+    export type SimulateOtaUpdateMutationResult = NonNullable<Awaited<ReturnType<typeof simulateOtaUpdate>>>
+    export type SimulateOtaUpdateMutationBody = BodyType<OtaSimulationInput>
+    export type SimulateOtaUpdateMutationError = ErrorType<unknown>
+
+    /**
+ * @summary Simulate the modeled impact of an OTA update
+ */
+export const useSimulateOtaUpdate = <TError = ErrorType<unknown>,
+    TContext = unknown>(options?: { mutation?:UseMutationOptions<Awaited<ReturnType<typeof simulateOtaUpdate>>, TError,{data: BodyType<OtaSimulationInput>}, TContext>, request?: SecondParameter<typeof customFetch>}
+ ): UseMutationResult<
+        Awaited<ReturnType<typeof simulateOtaUpdate>>,
+        TError,
+        {data: BodyType<OtaSimulationInput>},
+        TContext
+      > => {
+      return useMutation(getSimulateOtaUpdateMutationOptions(options));
     }
 

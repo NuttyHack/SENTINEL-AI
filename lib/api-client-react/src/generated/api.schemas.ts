@@ -169,6 +169,82 @@ export interface Report {
   sections: string[];
 }
 
+export interface RecallSignal {
+  id: string;
+  title: string;
+  component: string;
+  severity: string;
+  status: string;
+  affectedVehicles: number;
+  detectedDaysAgo: number;
+  confidence: number;
+  exposure: number;
+  signal: string;
+  leadingHypothesis: string;
+  whyFlagged: string[];
+  riskScore: number;
+}
+
+export interface RecallRadar {
+  signals: RecallSignal[];
+  totalAtRisk: number;
+  criticalSignals: number;
+  averageLeadTime: number;
+  syntheticLabel: string;
+  detectionTrend: TrendPoint[];
+}
+
+export interface SoftwareVersion {
+  version: string;
+  fleetShare: number;
+  diagnosticRate: number;
+  failureRate: number;
+  warrantyRate: number;
+}
+
+export interface SoftwareIntelligence {
+  baselineVersion: string;
+  comparisonVersion: string;
+  subsystem: string;
+  regressionAlert: string;
+  changeInDiagnostics: number;
+  changeInFailures: number;
+  changeInWarranty: number;
+  confidence: number;
+  affectedModels: TrendPoint[];
+  versions: SoftwareVersion[];
+  evidence: string[];
+  recommendation: string;
+}
+
+export interface OtaSimulationInput {
+  /** @minimum 1 */
+  population: number;
+  /** @minLength 1 */
+  fromVersion: string;
+  /** @minLength 1 */
+  toVersion: string;
+  /** @minLength 1 */
+  subsystem: string;
+  /**
+     * @minimum 1
+     * @maximum 100
+     */
+  deploymentPercentage: number;
+}
+
+export interface OtaSimulation {
+  population: number;
+  deploymentPercentage: number;
+  estimatedImpact: string;
+  potentialAnomalies: string[];
+  affectedModels: TrendPoint[];
+  riskLevel: string;
+  rollbackRecommendation: string;
+  modelConfidence: number;
+  simulatedEstimate: boolean;
+}
+
 export type ListIssuesParams = {
 status?: string;
 severity?: string;
@@ -176,5 +252,10 @@ severity?: string;
 
 export type ListVehiclesParams = {
 search?: string;
+};
+
+export type GetSoftwareIntelligenceParams = {
+baseline?: string;
+comparison?: string;
 };
 

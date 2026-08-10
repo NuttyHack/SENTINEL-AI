@@ -18,6 +18,9 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
+import RecallRadarPage from '@/pages/recall-radar';
+import SoftwareIntelligencePage from '@/pages/software-intelligence';
+import OtaSimulatorPage from '@/pages/ota-simulator';
 import './index.css';
 
 const queryClient = new QueryClient();
@@ -28,6 +31,9 @@ const nav = [
   { href: '/investigations', label: 'Investigations', icon: Target },
   { href: '/analytics', label: 'Analytics', icon: BarChart3 },
   { href: '/reports', label: 'Reports', icon: FileBarChart },
+  { href: '/recall-radar', label: 'Recall radar', icon: ShieldCheck },
+  { href: '/software-intelligence', label: 'Software watch', icon: GitBranch },
+  { href: '/ota-simulator', label: 'OTA simulator', icon: SlidersHorizontal },
 ];
 
 function AppShell({ children }: { children: ReactNode }) {
@@ -102,6 +108,6 @@ function InfoBlock({icon,title,text}:{icon:ReactNode;title:string;text:string}){
 function SettingsPanel({title,children}:{title:string;children:ReactNode}){return <section className="border border-[#bed2d4] bg-[#e8f1f0] p-6"><h3 className="font-display text-xl font-bold">{title}</h3><div className="mt-5">{children}</div></section>}
 function Toggle({label,checked}:{label:string;checked:boolean}){const [on,setOn]=useState(checked);return <button data-testid={`toggle-${label.toLowerCase().replaceAll(' ','-')}`} onClick={()=>setOn(!on)} className="flex w-full items-center justify-between border-t border-[#cbdcdd] py-4 text-left text-sm"><span>{label}</span><span className={`h-5 w-9 rounded-full p-0.5 transition-colors ${on?'bg-[#187e85]':'bg-[#b6ccce]'}`}><span className={`block h-4 w-4 rounded-full bg-[#f4f6e9] transition-transform ${on?'translate-x-4':''}`}/></span></button>}
 
-function Router(){return <AppShell><Switch><Route path="/" component={DashboardPage}/><Route path="/issues" component={IssuesPage}/><Route path="/issues/:id" component={IssueDetailPage}/><Route path="/vehicles" component={VehiclesPage}/><Route path="/vehicles/:id" component={VehicleDetailPage}/><Route path="/investigations" component={InvestigationsPage}/><Route path="/analytics" component={AnalyticsPage}/><Route path="/reports" component={ReportsPage}/><Route path="/transparency"><SimplePage type="transparency"/></Route><Route path="/settings"><SimplePage type="settings"/></Route><Route component={NotFound}/></Switch></AppShell>}
+function Router(){return <AppShell><Switch><Route path="/" component={DashboardPage}/><Route path="/issues" component={IssuesPage}/><Route path="/issues/:id" component={IssueDetailPage}/><Route path="/vehicles" component={VehiclesPage}/><Route path="/vehicles/:id" component={VehicleDetailPage}/><Route path="/investigations" component={InvestigationsPage}/><Route path="/analytics" component={AnalyticsPage}/><Route path="/reports" component={ReportsPage}/><Route path="/recall-radar" component={RecallRadarPage}/><Route path="/software-intelligence" component={SoftwareIntelligencePage}/><Route path="/ota-simulator" component={OtaSimulatorPage}/><Route path="/transparency"><SimplePage type="transparency"/></Route><Route path="/settings"><SimplePage type="settings"/></Route><Route component={NotFound}/></Switch></AppShell>}
 function App(){return <QueryClientProvider client={queryClient}><TooltipProvider><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/,'')}><ErrorBoundary><Router/></ErrorBoundary></WouterRouter><Toaster/></TooltipProvider></QueryClientProvider>}
 export default App;

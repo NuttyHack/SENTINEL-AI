@@ -20,6 +20,12 @@ tags:
     description: Investigation workflow
   - name: assistant
     description: Explainable AI assistant
+  - name: recall-radar
+    description: Predictive recall risk signals
+  - name: software-intelligence
+    description: Software regression intelligence
+  - name: ota-simulator
+    description: OTA update impact simulations
 paths:
   /healthz:
     get:
@@ -198,6 +204,59 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Report"
+  /recall-radar:
+    get:
+      operationId: getRecallRadar
+      tags: [recall-radar]
+      summary: Get ranked emerging recall risk signals
+      responses:
+        "200":
+          description: Recall radar summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RecallRadar"
+  /software-intelligence:
+    get:
+      operationId: getSoftwareIntelligence
+      tags: [software-intelligence]
+      summary: Compare software versions for model-estimated regressions
+      parameters:
+        - in: query
+          name: baseline
+          schema:
+            type: string
+          required: false
+        - in: query
+          name: comparison
+          schema:
+            type: string
+          required: false
+      responses:
+        "200":
+          description: Software intelligence comparison
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SoftwareIntelligence"
+  /ota-simulator:
+    post:
+      operationId: simulateOtaUpdate
+      tags: [ota-simulator]
+      summary: Simulate the modeled impact of an OTA update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OtaSimulationInput"
+      responses:
+        "200":
+          description: Modeled OTA simulation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OtaSimulation"
 components:
   schemas:
     HealthStatus:
@@ -414,4 +473,94 @@ components:
         sections:
           type: array
           items: { type: string }
+    RecallRadar:
+      type: object
+      required: [signals, totalAtRisk, criticalSignals, averageLeadTime, syntheticLabel, detectionTrend]
+      properties:
+        signals:
+          type: array
+          items: { $ref: "#/components/schemas/RecallSignal" }
+        totalAtRisk: { type: number }
+        criticalSignals: { type: number }
+        averageLeadTime: { type: number }
+        syntheticLabel: { type: string }
+        detectionTrend:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+    RecallSignal:
+      type: object
+      required: [id, title, component, severity, status, affectedVehicles, detectedDaysAgo, confidence, exposure, signal, leadingHypothesis, whyFlagged, riskScore]
+      properties:
+        id: { type: string }
+        title: { type: string }
+        component: { type: string }
+        severity: { type: string }
+        status: { type: string }
+        affectedVehicles: { type: number }
+        detectedDaysAgo: { type: number }
+        confidence: { type: number }
+        exposure: { type: number }
+        signal: { type: string }
+        leadingHypothesis: { type: string }
+        whyFlagged:
+          type: array
+          items: { type: string }
+        riskScore: { type: number }
+    SoftwareIntelligence:
+      type: object
+      required: [baselineVersion, comparisonVersion, subsystem, regressionAlert, changeInDiagnostics, changeInFailures, changeInWarranty, confidence, affectedModels, versions, evidence, recommendation]
+      properties:
+        baselineVersion: { type: string }
+        comparisonVersion: { type: string }
+        subsystem: { type: string }
+        regressionAlert: { type: string }
+        changeInDiagnostics: { type: number }
+        changeInFailures: { type: number }
+        changeInWarranty: { type: number }
+        confidence: { type: number }
+        affectedModels:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+        versions:
+          type: array
+          items: { $ref: "#/components/schemas/SoftwareVersion" }
+        evidence:
+          type: array
+          items: { type: string }
+        recommendation: { type: string }
+    SoftwareVersion:
+      type: object
+      required: [version, fleetShare, diagnosticRate, failureRate, warrantyRate]
+      properties:
+        version: { type: string }
+        fleetShare: { type: number }
+        diagnosticRate: { type: number }
+        failureRate: { type: number }
+        warrantyRate: { type: number }
+    OtaSimulationInput:
+      type: object
+      required: [population, fromVersion, toVersion, subsystem, deploymentPercentage]
+      properties:
+        population: { type: number, minimum: 1 }
+        fromVersion: { type: string, minLength: 1 }
+        toVersion: { type: string, minLength: 1 }
+        subsystem: { type: string, minLength: 1 }
+        deploymentPercentage: { type: number, minimum: 1, maximum: 100 }
+    OtaSimulation:
+      type: object
+      required: [population, deploymentPercentage, estimatedImpact, potentialAnomalies, affectedModels, riskLevel, rollbackRecommendation, modelConfidence, simulatedEstimate]
+      properties:
+        population: { type: number }
+        deploymentPercentage: { type: number }
+        estimatedImpact: { type: string }
+        potentialAnomalies:
+          type: array
+          items: { type: string }
+        affectedModels:
+          type: array
+          items: { $ref: "#/components/schemas/TrendPoint" }
+        riskLevel: { type: string }
+        rollbackRecommendation: { type: string }
+        modelConfidence: { type: number }
+        simulatedEstimate: { type: boolean }
 
