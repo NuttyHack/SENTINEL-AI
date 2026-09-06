@@ -1,0 +1,800 @@
+STOP adding new backend features for now.
+
+The current Sentinel AI application is functionally strong, but the visual design is NOT acceptable. It looks like a generic enterprise dashboard and does not communicate premium automotive technology.
+
+I want a COMPLETE FRONTEND VISUAL REDESIGN.
+
+Do NOT destroy or remove the existing working backend, API contracts, synthetic intelligence, Recall Radar, Software Intelligence, OTA Simulator, investigations, or Command Center functionality.
+
+Preserve all existing functionality.
+
+The priority now is VISUAL QUALITY, BRAND EXPERIENCE, MOTION, CINEMATIC AUTOMOTIVE DESIGN, AND PREMIUM UX.
+
+==================================================
+CORE DESIGN VISION
+==================================================
+
+Sentinel AI should look like a next-generation automotive intelligence company.
+
+Think:
+
+PREMIUM AUTOMOTIVE BRAND
++
+AI RESEARCH LAB
++
+SPACE/FLIGHT MISSION CONTROL
++
+NEXT-GENERATION SOFTWARE
+
+The site must feel extremely modern, cinematic, sophisticated, expensive, and technologically advanced.
+
+It should NOT look like:
+
+- a normal SaaS dashboard
+- an admin panel
+- a Bootstrap template
+- a generic AI startup
+- a school project
+- a collection of cards
+
+The first impression should be:
+
+"THIS IS AN AUTOMOTIVE TECHNOLOGY COMPANY."
+
+==================================================
+IMPORTANT: HERO IMAGERY
+==================================================
+
+The landing page MUST use large, high-quality automotive imagery.
+
+Do NOT create an empty hero with only text and gradients.
+
+Use cinematic vehicle photography as major visual elements.
+
+Hero imagery should feature:
+
+- modern performance pickup/SUV silhouettes
+- close-up automotive details
+- headlights
+- wheels
+- bodywork
+- cockpit/interior
+- vehicle driving through dramatic environments
+- technology/vehicle sensor imagery
+
+Use large edge-to-edge imagery.
+
+Images should feel cinematic and premium.
+
+Do NOT use small stock-photo cards.
+
+Do NOT use generic AI illustrations.
+
+Do NOT use cartoon cars.
+
+Do NOT use random placeholder images.
+
+If image assets are unavailable locally, create a dedicated image asset structure and use reliable high-quality remote image URLs temporarily, while keeping the architecture ready for local assets.
+
+Use CSS overlays/gradients over photographs to preserve text readability.
+
+==================================================
+LANDING PAGE
+==================================================
+
+Completely redesign "/".
+
+The landing page should feel like an Apple/Porsche/Tesla-level product launch page rather than an admin dashboard.
+
+SECTION 1 — CINEMATIC HERO
+
+Full viewport hero.
+
+Background:
+
+large cinematic automotive image.
+
+Use subtle dark overlay.
+
+Foreground:
+
+SENTINEL AI
+
+GLOBAL VEHICLE INTELLIGENCE
+
+Huge headline:
+
+"INTELLIGENCE
+BEFORE FAILURE."
+
+Supporting text:
+
+"Predict emerging vehicle-quality risks before they become expensive failures."
+
+Buttons:
+
+EXPLORE SENTINEL
+WATCH THE DEMO
+
+Add a small badge:
+
+INDEPENDENT AUTOMOTIVE AI PLATFORM
+
+Do not claim Ford partnership.
+
+Add subtle animated telemetry/data overlays around the vehicle.
+
+Example:
+
+VEHICLE SIGNAL
+98.2%
+
+SYSTEM HEALTH
+91%
+
+ANOMALY DETECTED
+02:41:18
+
+These should animate subtly.
+
+==================================================
+HERO MOTION
+==================================================
+
+Implement cinematic scroll behavior.
+
+As the user scrolls:
+
+1. Hero image slowly scales.
+2. Data overlays move subtly.
+3. Headline transitions.
+4. Vehicle image transitions into the Sentinel intelligence network.
+5. Feature cards emerge from the image.
+
+Use Framer Motion if already available.
+
+Animations must be smooth.
+
+No excessive bouncing.
+
+No cheap animations.
+
+==================================================
+SECTION 2 — THE PROBLEM
+==================================================
+
+Full-width cinematic section.
+
+Large statement:
+
+"VEHICLES GENERATE BILLIONS OF SIGNALS."
+
+Then reveal:
+
+Diagnostics
+Warranty
+Software
+Manufacturing
+Customer Voice
+Telemetry
+
+Animate these signals flowing toward Sentinel.
+
+Visual concept:
+
+MULTIPLE DATA STREAMS
+        ↓
+SENTINEL AI
+        ↓
+EMERGING RISK
+        ↓
+ENGINEERING ACTION
+
+This should be visually impressive.
+
+==================================================
+SECTION 3 — SENTINEL INTELLIGENCE
+==================================================
+
+Do NOT use six tiny cards.
+
+Use LARGE editorial feature panels.
+
+Panel 1:
+
+RECALL RADAR
+
+Large automotive image.
+
+Text:
+
+"Find the signal before the recall."
+
+Interactive visualization showing an emerging anomaly.
+
+Panel 2:
+
+DIGITAL TWIN
+
+Large vehicle visualization.
+
+Show systems:
+
+ENGINE
+TRANSMISSION
+BATTERY
+COOLING
+ELECTRICAL
+
+Panel 3:
+
+SOFTWARE INTELLIGENCE
+
+Show version comparison:
+
+v4.7 → v4.8
+
+with animated diagnostic changes.
+
+Panel 4:
+
+AI INVESTIGATOR
+
+Show an investigation interface.
+
+AI discovers:
+
+COMPONENT
++
+SOFTWARE
++
+ENVIRONMENT
+
+→ POTENTIAL ROOT CAUSE
+
+==================================================
+SECTION 4 — DIGITAL VEHICLE
+==================================================
+
+Create a massive immersive vehicle section.
+
+Show a premium vehicle visual occupying much of the screen.
+
+Overlay interactive hotspots.
+
+Click:
+
+ENGINE
+BATTERY
+BRAKES
+COOLING
+SENSORS
+ELECTRICAL
+
+Each opens a small intelligence panel.
+
+Example:
+
+COOLING SYSTEM
+
+Health
+76%
+
+Model-estimated risk
+Elevated
+
+Evidence
+3 signals
+
+Make this feel like a digital twin.
+
+==================================================
+SECTION 5 — AI INVESTIGATION
+==================================================
+
+Create a cinematic investigation sequence.
+
+Headline:
+
+"FROM SIGNAL TO EXPLANATION."
+
+Animate a real investigation:
+
+1. Weak signal detected
+2. Anomaly identified
+3. Vehicle population isolated
+4. Component correlation discovered
+5. Software correlation discovered
+6. Risk calculated
+7. Engineer investigation recommended
+
+This should feel like watching an AI solve a complex problem.
+
+==================================================
+SECTION 6 — GLOBAL FLEET
+==================================================
+
+Create a full-width dark world map.
+
+Show animated data points.
+
+Regions:
+
+North America
+South America
+Europe
+Africa
+Asia-Pacific
+
+Display simulated signals.
+
+Example:
+
+184K VEHICLES
+7 EMERGING SIGNALS
+2 HIGH-RISK ISSUES
+
+Clearly label:
+
+SIMULATED DEMONSTRATION DATA
+
+==================================================
+SECTION 7 — BUSINESS IMPACT
+==================================================
+
+Make this visually dramatic.
+
+Headline:
+
+"EARLIER DETECTION CHANGES THE EQUATION."
+
+Create a comparison.
+
+WITHOUT EARLY DETECTION
+
+Potential exposure
+$240M
+
+WITH EARLY DETECTION
+
+Modeled exposure
+$68M
+
+Potential difference
+$172M
+
+IMPORTANT:
+
+These are synthetic/model-estimated figures.
+
+Clearly label them.
+
+Animate the numbers counting upward.
+
+==================================================
+SECTION 8 — SENTINEL LABS
+==================================================
+
+Create a futuristic research-lab section.
+
+Large cards:
+
+DIGITAL TWIN
+RECALL RADAR
+ROOT CAUSE AI
+SOFTWARE REGRESSION
+FLEET INTELLIGENCE
+PREDICTIVE HEALTH
+
+Use large images and visual experiments.
+
+Make it feel like an R&D organization.
+
+==================================================
+SECTION 9 — FINAL CTA
+==================================================
+
+Huge cinematic section.
+
+Background automotive image.
+
+Headline:
+
+"THE NEXT FAILURE
+SHOULD NOT BE A SURPRISE."
+
+Subtext:
+
+"Sentinel AI turns fragmented vehicle signals into actionable intelligence."
+
+Button:
+
+ENTER SENTINEL
+
+==================================================
+NAVIGATION
+==================================================
+
+Create a premium floating navigation.
+
+Logo:
+
+SENTINEL
+
+Navigation:
+
+Platform
+Intelligence
+Labs
+Technology
+Demo
+
+Right side:
+
+SIGN IN
+GET STARTED
+
+The navbar should initially be transparent over the hero.
+
+When scrolling, transition into a dark glass navigation bar.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use premium modern typography.
+
+Large display typography.
+
+Strong contrast.
+
+Very large hero headlines.
+
+Avoid tiny text.
+
+Use typography to create hierarchy.
+
+Use uppercase labels sparingly for technical metadata.
+
+==================================================
+COLOR SYSTEM
+==================================================
+
+Use an extremely sophisticated dark system.
+
+Primary:
+
+near-black
+
+Secondary:
+
+deep graphite
+
+Text:
+
+off-white
+
+Accent:
+
+restrained electric blue / cyan
+
+Use accent colors only for:
+
+AI activity
+risk
+interactive elements
+data visualization
+
+Do not turn the entire website neon.
+
+==================================================
+CARDS
+==================================================
+
+Cards must NOT look like ordinary rectangular dashboard cards.
+
+Use:
+
+large editorial panels
+rounded corners
+subtle borders
+glass surfaces
+image backgrounds
+depth
+hover transformations
+
+Some cards should be enormous.
+
+Use asymmetrical layouts.
+
+Do NOT make everything a 3-column grid.
+
+==================================================
+IMAGE TREATMENT
+==================================================
+
+Use cinematic image crops.
+
+Images should sometimes occupy:
+
+50%
+70%
+or 100%
+
+of the viewport.
+
+Use:
+
+object-fit: cover
+
+dark gradient overlays
+
+subtle blur behind UI
+
+parallax movement
+
+Do not place images in tiny 300x200 cards.
+
+==================================================
+AUTHENTICATION REDESIGN
+==================================================
+
+Completely redesign:
+
+/login
+/signup
+/forgot-password
+/onboarding
+
+Login:
+
+LEFT 60%
+
+Full-height cinematic automotive image.
+
+Overlay:
+
+SENTINEL AI
+
+"Intelligence before failure."
+
+RIGHT 40%
+
+Premium glass authentication panel.
+
+Email
+Password
+
+SIGN IN
+
+Continue with Google
+
+Forgot password
+
+Create account
+
+Signup should use the same visual language.
+
+==================================================
+APPLICATION UI
+==================================================
+
+The internal application should ALSO be redesigned.
+
+Do not make it identical to the marketing website.
+
+The dashboard should feel like a sophisticated mission-control environment.
+
+Use:
+
+- dark sidebar
+- large data canvas
+- glass panels
+- animated charts
+- large KPI numbers
+- interactive maps
+- risk indicators
+- investigation timelines
+
+The Command Center should become visually impressive.
+
+==================================================
+COMMAND CENTER
+==================================================
+
+Create a large central visualization.
+
+Headline:
+
+GLOBAL QUALITY COMMAND CENTER
+
+Top metrics:
+
+GLOBAL HEALTH
+87%
+
+EMERGING SIGNALS
+07
+
+HIGH RISK
+02
+
+VEHICLES MONITORED
+184,920
+
+Then:
+
+large global map
+
+large emerging-risk visualization
+
+large AI activity stream
+
+large investigation panel
+
+Do NOT squeeze everything into small cards.
+
+==================================================
+RECALL RADAR
+==================================================
+
+Redesign Recall Radar as a premium intelligence interface.
+
+Hero:
+
+RECALL RADAR
+
+"Detect the signal before the recall."
+
+Large risk visualization.
+
+Show:
+
+Risk score
+Affected population
+Confidence
+First detected
+Potential exposure
+
+Then:
+
+AI evidence
+
+Root cause graph
+
+Timeline
+
+Recommended action
+
+==================================================
+SOFTWARE INTELLIGENCE
+==================================================
+
+Make software comparison visually impressive.
+
+Show:
+
+VERSION 4.7
+
+VS
+
+VERSION 4.8
+
+Animated difference visualization.
+
+Diagnostics
+Warranty
+Failure rate
+Affected models
+
+Add:
+
+"Investigate regression"
+
+==================================================
+OTA SIMULATOR
+==================================================
+
+Create a premium simulation interface.
+
+Large vehicle visual.
+
+Controls:
+
+Deployment percentage
+Vehicle population
+Software version
+Subsystem
+
+Show live simulation output.
+
+Risk level changes dynamically.
+
+==================================================
+MICROINTERACTIONS
+==================================================
+
+Add polished microinteractions everywhere.
+
+Examples:
+
+buttons have subtle hover movement
+
+cards tilt very slightly
+
+numbers animate
+
+charts reveal themselves
+
+risk indicators pulse subtly
+
+images zoom 1–2% on hover
+
+navigation transitions smoothly
+
+Use motion carefully.
+
+==================================================
+RESPONSIVENESS
+==================================================
+
+Desktop must look spectacular.
+
+Tablet must remain polished.
+
+Mobile must become a cinematic stacked experience.
+
+Hero image remains prominent.
+
+Do not simply shrink desktop UI.
+
+==================================================
+MOST IMPORTANT RULE
+==================================================
+
+Do NOT spend the next build cycle adding more features.
+
+The current product already has substantial functionality.
+
+The next build cycle is a DESIGN OVERHAUL.
+
+Prioritize:
+
+1. Cinematic hero imagery
+2. Landing page
+3. Premium typography
+4. Motion
+5. Large editorial layouts
+6. Automotive imagery
+7. Digital Twin visual
+8. Recall Radar visual
+9. Modern authentication
+10. Command Center visual redesign
+
+The finished product should look like a premium technology company that could plausibly be presenting at a major automotive technology conference.
+
+It must NOT look like a generic Replit project.
+
+Preserve all existing functionality and backend routes.
+
+Do not remove working features.
+
+Do not fabricate real Ford data or partnerships.
+
+Synthetic data must remain clearly labeled.
+
+Before finishing, visually inspect every major page in the browser and fix:
+
+- awkward spacing
+- weak hierarchy
+- tiny text
+- empty areas
+- generic cards
+- inconsistent typography
+- poor image crops
+- broken responsive layouts
+- excessive borders
+- excessive gradients
+- unfinished states
+
+Do not tell me the redesign is complete until the landing page, authentication pages, Command Center, Recall Radar, Software Intelligence, and OTA Simulator have all been visually inspected.
