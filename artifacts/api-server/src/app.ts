@@ -30,15 +30,15 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// 1. Existing API endpoints
+// 1. API endpoints
 app.use("/api", router);
 
-// 2. Resolve frontend static dist path and serve built files
+// 2. Serve static frontend files
 const frontendDist = path.resolve(process.cwd(), "artifacts/sentinel-ai/dist");
 app.use(express.static(frontendDist));
 
-// 3. Catch-all route to serve index.html for client-side routing
-app.get("*", (_req, res) => {
+// 3. Express 5 / path-to-regexp v8 catch-all wildcard syntax
+app.get("/*splat", (_req, res) => {
   res.sendFile(path.resolve(frontendDist, "index.html"));
 });
 
