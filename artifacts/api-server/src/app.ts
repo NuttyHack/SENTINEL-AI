@@ -33,11 +33,12 @@ app.use(express.urlencoded({ extended: true }));
 // 1. API endpoints
 app.use("/api", router);
 
-// 2. Serve static frontend files
-const frontendDist = path.resolve(process.cwd(), "artifacts/sentinel-ai/dist");
+// 2. Resolve frontend dist folder relative to this file's directory
+const frontendDist = path.resolve(import.meta.dirname, "../../sentinel-ai/dist");
+
 app.use(express.static(frontendDist));
 
-// 3. Express 5 / path-to-regexp v8 catch-all wildcard syntax
+// 3. Catch-all route to serve index.html for client-side routing
 app.get("/*splat", (_req, res) => {
   res.sendFile(path.resolve(frontendDist, "index.html"));
 });
