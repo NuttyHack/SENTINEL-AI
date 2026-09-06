@@ -773,7 +773,7 @@ Prioritize:
 
 The finished product should look like a premium technology company that could plausibly be presenting at a major automotive technology conference.
 
-It must NOT look like a generic Replit project.
+
 
 Preserve all existing functionality and backend routes.
 
