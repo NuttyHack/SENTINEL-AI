@@ -1,3 +1,4 @@
+import path from "path";
 import express, { type Express } from "express";
 import cors from "cors";
 import pinoHttp from "pino-http";
@@ -29,6 +30,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// 1. Existing API endpoints
 app.use("/api", router);
+
+// 2. Resolve frontend static dist path and serve built files
+const frontendDist = path.resolve(process.cwd(), "artifacts/sentinel-ai/dist");
+app.use(express.static(frontendDist));
+
+// 3. Catch-all route to serve index.html for client-side routing
+app.get("*", (_req, res) => {
+  res.sendFile(path.resolve(frontendDist, "index.html"));
+});
 
 export default app;
