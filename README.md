@@ -7,13 +7,13 @@
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)
 
-> **Enterprise-grade automotive intelligence platform engineered for predictive risk management, digital twin telemetry, and dynamic recall analysis.**
+> Enterprise-grade automotive intelligence platform engineered for predictive risk management, digital twin telemetry, and dynamic recall analysis.
 
 ---
 
 ## 📌 Executive Summary
 
-**SENTINEL-AI** is a centralized telemetry and analytics engine designed to help Original Equipment Manufacturers (OEMs) monitor digital twins, manage firmware Over-The-Air (OTA) deployment risks, and predict hardware failures before they occur. 
+**SENTINEL-AI** is a centralized telemetry and analytics engine designed to help Original Equipment Manufacturers (OEMs) monitor digital twins, manage firmware Over-The-Air (OTA) deployment risks, and predict hardware failures before they occur.
 
 By unifying field telemetry with algorithmic risk scoring, SENTINEL-AI transforms reactive automotive recall operations into a proactive software-driven pipeline.
 
@@ -43,40 +43,36 @@ The platform follows a decoupled, service-oriented architecture designed for hig
 │   Recall Radar     │       │   OTA Simulator    │       │   Digital Twin     │
 │   Analytics Engine │       │   Pipeline Service │       │   Telemetry Store  │
 └────────────────────┘       └────────────────────┘       └────────────────────┘
+Core Technologies
+Frontend: React, TypeScript, Vite, Tailwind CSS, Lucide Icons
 
-### Core Technologies
+Backend: Node.js, Express v5, TypeScript
 
-* **Frontend:** React, TypeScript, Vite, Tailwind CSS (Design System), Lucide Icons
-* **Backend:** Node.js, Express v5, TypeScript
-* **State & Data Management:** RESTful Architecture, Asynchronous Pipeline Processing
-* **Tooling & Build System:** TSX, ESLint, Git, Vite
+Architecture: RESTful API, Asynchronous Pipeline Processing
 
----
+Tooling: TSX, ESLint, Git, Vite
 
-## 🚀 Key Features
+🚀 Key Features
+📡 Recall Radar: Real-time analytics engine aggregating field component failure signals to calculate OEM risk exposure.
 
-* 📡 **Recall Radar:** Real-time analytics engine aggregating field component failure signals to calculate OEM risk exposure.
-* ⚡ **OTA Simulator:** Testing pipeline for staging and dry-running vehicle firmware distribution batches under simulated network constraints.
-* 🚗 **Digital Twin Management:** Unified telemetry monitoring interface displaying real-time operational metrics across connected fleets.
-* 🛡️ **Predictive Quality Guard:** Automated threshold monitoring designed to notify engineering teams prior to critical system faults.
+⚡ OTA Simulator: Testing pipeline for staging and dry-running vehicle firmware distribution batches under simulated network constraints.
 
----
+🚗 Digital Twin Management: Unified telemetry monitoring interface displaying real-time operational metrics across connected fleets.
 
-## 💻 Getting Started
+🛡️ Predictive Quality Guard: Automated threshold monitoring designed to notify engineering teams prior to critical system faults.
 
-### Prerequisites
+💻 Getting Started
+Prerequisites
+Node.js: v18.x or higher
 
-Ensure you have the following software installed locally:
+npm: v9.x or higher
 
-* **Node.js**: `v18.x` or higher
-* **npm**: `v9.x` or higher
+Installation
+Clone the repository:
 
-### Installation
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/NuttyHack/SENTINEL-AI.git](https://github.com/NuttyHack/SENTINEL-AI.git)
-   cd SENTINEL-AI
+Bash
+git clone [https://github.com/NuttyHack/SENTINEL-AI.git](https://github.com/NuttyHack/SENTINEL-AI.git)
+cd SENTINEL-AI
 Install dependencies:
 
 Bash
@@ -91,8 +87,6 @@ Run Development Server:
 
 Bash
 npm run dev
-The backend service and frontend client will spin up concurrently at http://localhost:5000 (or configured dev port).
-
 📂 Repository Structure
 Plaintext
 SENTINEL-AI/
@@ -109,7 +103,7 @@ SENTINEL-AI/
 ├── package.json
 └── tsconfig.json
 📄 License
-Distributed under the MIT License. See LICENSE for more information.
+Distributed under the MIT License.
 
 👨‍💻 Author & Maintainer
 Nkosinathi Ngwenya (NuttyHack)
