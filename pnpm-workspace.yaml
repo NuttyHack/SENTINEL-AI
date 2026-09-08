@@ -16,7 +16,7 @@
 # passed (e.g. an urgent security bugfix), you can add it to the
 # `minimumReleaseAgeExclude` allowlist below. Only consider doing this for
 # packages released by trusted organizations with an impeccable security
-# remove the exclusion once the 1-day window has passed.
+# track record, and remove the exclusion once the 1-day window has passed.
 #
 # Example:
 #   minimumReleaseAgeExclude:
@@ -56,12 +56,6 @@ catalog:
   zod: ^3.25.76
 
 autoInstallPeers: false
-
-onlyBuiltDependencies:
-  - '@swc/core'
-  - esbuild
-  - msw
-  - unrs-resolver
 
 overrides:
   "esbuild>@esbuild/darwin-arm64": "-"
@@ -131,8 +125,6 @@ overrides:
   "rollup>@rollup/rollup-openharmony-arm64": "-"
   "rollup>@rollup/rollup-win32-arm64-msvc": "-"
   "rollup>@rollup/rollup-win32-ia32-msvc": "-"
-  "rollup>@rollup/rollup-win32-x64-gnu": "-"
-  "rollup>@rollup/rollup-win32-x64-msvc": "-"
   "@expo/ngrok-bin>@expo/ngrok-bin-darwin-arm64": "-"
   "@expo/ngrok-bin>@expo/ngrok-bin-darwin-x64": "-"
   "@expo/ngrok-bin>@expo/ngrok-bin-freebsd-ia32": "-"
@@ -148,4 +140,8 @@ overrides:
   esbuild: "0.27.3"
 
 allowBuilds:
+  '@swc/core': true
   esbuild: true
+  msw: true
+  rollup: true
+  unrs-resolver: true
