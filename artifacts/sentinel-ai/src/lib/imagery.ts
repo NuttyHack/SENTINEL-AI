@@ -6,5 +6,5 @@ export const automotiveImagery = {
     "https://www.ford.co.za/content/dam/Ford/za/nameplate/ranger-raptor/overview/model-walk/raptor-model-walk.webp",
   road: "https://www.carshophub.co.za/XMLFeedOutput/VehicleImages/888896/SP103For00118/SP103For00118-22.jpg",
   wheel:
-    "https://cars.webeng.co/wp-content/uploads/2025/11/raptor-overview-mobile-1100-1024x1024.webp",
+    "https://media.citizen.co.za/wp-content/uploads/2023/02/DSC_4684-m.jpg",
 } as const;
